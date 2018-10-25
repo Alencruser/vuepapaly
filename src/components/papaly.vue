@@ -12,6 +12,7 @@
 			<input type="text" v-model="categoryAdd">
 			<button @click="create">Ajouter votre catégorie</button>
 		</div>
+		<div v-for="cat in categorylist" :id="cat"></div>
 	</div>
 </template>
 <script>
