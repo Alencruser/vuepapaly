@@ -13,13 +13,15 @@
 			<input placeholder="Nom de votre catégorie" type="text" v-model="categoryAdd">
 			<button @click="create">Ajouter votre catégorie</button>
 		</div>
-		<div v-for="cat in category" :id="cat">
+		<div v-for="cat,index in category" :id="cat">
 			<h2>{{cat}}</h2>
 			<div v-for="link,index in prepareDom[cat]">
 				<a  :href="link[0]" target="_blank">{{link[1]}}
-					<br></a>
+				</a>
 					<button v-model="index" :value="index" @click="supp(cat,index)">Supprimer ce lien</button>
 				</div>
+				<h4>Vous voulez la catégorie {{cat}} ? Cliquez ci-dessous</h4>
+				<button @click="delcat(index)">Supprimer la catégorie {{cat}}</button>
 			</div>
 		</div>
 	</template>
@@ -62,6 +64,11 @@
 				},
 				supp: function(cat,index){
 					this.prepareDom[cat].splice(index,1)
+					this.linkname=' '
+					this.linkname=''
+				},
+				delcat: function(index){
+					this.category.splice(index,1)
 					this.linkname=' '
 					this.linkname=''
 				}
