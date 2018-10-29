@@ -1,26 +1,5 @@
 # papaly
 
-## Project setup
+Lien de la version en ligne : https://papavue.herokuapp.com/
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+Etant donné que j'etais seul je n'ai fais ni carnet de bord ni kanban ni planning poker.
